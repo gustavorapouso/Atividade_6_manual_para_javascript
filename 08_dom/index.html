@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>08_dom</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="title">08_DOM</h1>
+      <h2 id="exemplo">Texto atual</h2>
+
+      <button onclick="mudaTexto()">Clique aqui</button>
+    </header>
+    <section>
+      <h4>Qual meu nome do meio?</h4>
+      <select id="selecao">
+        <option value="">Selecione</option>
+        <option value="gustavo">Gustavo</option>
+        <option value="henrique">Henrique</option>
+        <option value="rapouso">Rapouso</option>
+      </select>
+      <p id="mensagem"></p>
+    </section>
+
+    <input type="checkbox" id="termo" />Confirme aqui se o Gustavo é lindo.
+    <p id="mensagem"></p>
+
+    <button type="submit">Concluir</button>
+    <p id="mensagem"></p>
+
+    <script>
+      let texto = document.getElementById("exemplo");
+
+      const termos = document.getElementById("termo").checked;
+
+        addEventListener("submit", function (event) {
+            event.preventDefault();
+            function mudaTexto() {
+                texto.textContent = "Outro texto";
+            }
+
+            let selecao = document.getElementById("selecao");
+            let mensagem = document.getElementById("mensagem");
+
+            selecao.addEventListener("change", function (event) {
+                if (selecao == "gustavo") {
+                mensagem.textContent = "Esse é meu primeiro nome.";
+                return;
+                }
+
+                if (selecao == "rapouso") {
+                mensagem.textContent = "Esse é meu último nome.";
+                return;
+                }
+
+                if (selecao == "henrique") {
+                mensagem.textContent = "Acertou.";
+                return;
+                }
+            });
+        });
+
+      if (!termos) {
+        mensagem.textContent = "Você precisa colocar que o Gustavo é lindo.";
+      }
+    </script>
+  </body>
+</html>

@@ -152,3 +152,10 @@ appendChild();
 adiciona elemento
 remove().
 remove elemento
+
+## Referências:
+https://www.w3schools.com/js/default.asp
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript
+https://www.freecodecamp.org/portuguese/news/var-let-e-const-qual-e-a-diferenca/
+https://www.reddit.com/r/learnjavascript/comments/pw2dct/separate_js_file_vs_script_tags/?tl=pt-br
+
